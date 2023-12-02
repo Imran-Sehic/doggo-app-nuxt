@@ -1,0 +1,4 @@
+<template>
+    <NavigationComponent />
+    <slot />
+</template>
