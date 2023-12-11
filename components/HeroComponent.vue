@@ -1,83 +1,40 @@
 <template>
-    <div class="wrapper">
-        <h2>
-            Welcome to <span>Doggo</span>
-            <br />
-            Experience the dog research as never before
-        </h2>
-        <div>
-            <img src="/hero-dog.png" alt="dog image" />
-        </div>
-    </div>
+  <v-row
+    no-gutters
+    justify="center"
+    align="center"
+    :class="['mt-10', $vuetify.display.smAndDown && 'flex-column-reverse']"
+  >
+    <v-col cols="8" md="4" :align="$vuetify.display.sm ? 'center' : 'start'"
+      ><h2>
+        Welcome to <span>Doggo</span>
+        <br />
+        Experience the dog research as never before
+      </h2></v-col
+    >
+    <v-col
+      cols="8"
+      md="4"
+      :align="$vuetify.display.smAndDown ? 'center' : 'end'"
+      ><img src="/hero-dog.png" alt="dog image"
+    /></v-col>
+  </v-row>
 </template>
 
 <style scoped>
-.wrapper {
-    margin: 3rem 7rem;
-    padding: 2rem 12rem 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.wrapper>h2 {
-    font-size: 36px;
-    flex: 1;
+h2 {
+  font-size: 36px;
+  flex: 1;
 }
 
 img {
-    width: 250px;
-    height: 300px;
+  width: 250px;
+  height: 300px;
 }
 
-.wrapper>div {
-    text-align: right;
-    flex: 1;
-}
-
-.wrapper>h2>span {
-    color: rgb(54, 120, 182);
-    font-size: 46px;
-    font-weight: bolder;
-}
-
-/*smaller desktop*/
-@media screen and (max-width: 1150px) {
-    .wrapper {
-        padding: 2rem 5rem 0;
-    }
-}
-
-/*bigger tablet*/
-@media screen and (max-width: 950px) {
-    .wrapper {
-        margin: 2rem 2rem;
-    }
-}
-
-/*tablet*/
-@media screen and (max-width: 750px) {
-    .wrapper {
-        flex-direction: column-reverse;
-    }
-
-    .wrapper>h2 {
-        margin-top: 2rem;
-    }
-}
-
-/*smaller tablet*/
-@media screen and (max-width: 600px) {
-    .wrapper {
-        padding: 2rem 4rem 0;
-    }
-}
-
-/*mobile*/
-@media screen and (max-width: 500px) {
-    .wrapper {
-        padding: 3rem 0 0;
-        text-align: center;
-    }
+h2 > span {
+  color: rgb(54, 120, 182);
+  font-size: 46px;
+  font-weight: bolder;
 }
 </style>
